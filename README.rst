@@ -10,14 +10,14 @@ qsdcolorxyz
     :alt: Coverage
 
 **qsdcolorxyz** is a Python 3 package that extends `qecsim`_ with additional
-components for a variant of the color code.
+components for the XYZ variant of the color code.
 
 .. _qecsim: https://github.com/qecsim/qecsim
 
 The qecsim package is a quantum error correction simulator, which can be
 extended with new codes, error models and decoders that integrate into its
-command-line interface. This qsdcolorxyz package includes implementations of a
-variant of the color code and a corresponding tensor-network decoder.
+command-line interface. This qsdcolorxyz package includes implementations
+relevant to the XYZ variant of the color code.
 
 
 Installation

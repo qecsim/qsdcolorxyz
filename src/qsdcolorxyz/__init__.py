@@ -1,6 +1,6 @@
 """
 **qsdcolorxyz** is a Python 3 package that extends `qecsim`_ with additional
-components for a variant of the color code.
+components for the XYZ variant of the color code.
 
 See the README at `qsdcolorxyz`_ for details.
 

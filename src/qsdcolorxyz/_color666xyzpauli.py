@@ -8,7 +8,7 @@ class Color666XYZPauli(Color666Pauli):
     Notes:
 
     * This is a utility class used by color 6.6.6 XYZ implementations of the core models.
-    * It is typically instantiated using :meth:`qecsim.models.colorxz.Color666XYZCode.new_pauli`
+    * It is typically instantiated using :meth:`qsdcolorxyz.Color666XYZCode.new_pauli`
     """
 
     def site(self, operator, *indices, apply_permute=False):
