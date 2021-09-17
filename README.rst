@@ -33,7 +33,7 @@ TODO
 
 
 Developer Notes
-_______________
+---------------
 
 Tasks for running tests with coverage, checking style, generating documentation
 and building source and binary distributables can be executed using tox_. See
