@@ -52,6 +52,8 @@ qsdcolorxyz is released under the BSD 3-Clause license; see `<LICENSE>`__.
 If you use qecsim in your research, please see the `qecsim documentation`_ for
 citing details.
 
+.. _qecsim documentation: https://qecsim.github.io/
+
 
 Links
 -----
