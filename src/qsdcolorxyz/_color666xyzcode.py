@@ -1,5 +1,6 @@
 from qecsim.model import cli_description
 from qecsim.models.color import Color666Code
+
 from . import Color666XYZPauli
 
 

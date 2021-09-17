@@ -2,7 +2,6 @@ import functools
 import logging
 
 import numpy as np
-
 from qecsim import paulitools as pt
 from qecsim import tensortools as tt
 from qecsim.model import cli_description

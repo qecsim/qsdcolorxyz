@@ -4,10 +4,10 @@ import logging
 import numpy as np
 import pytest
 from mpmath import mp
-
 from qecsim import paulitools as pt
-from qsdcolorxyz import Color666XYZCode, Color666XYZMPSDecoder
 from qecsim.models.generic import BiasedDepolarizingErrorModel, DepolarizingErrorModel
+
+from qsdcolorxyz import Color666XYZCode, Color666XYZMPSDecoder
 
 
 def _is_close(a, b, rtol=1e-05, atol=1e-08):
@@ -162,26 +162,26 @@ def test_color666xyz_mps_decoder_cosets_probability_equality_biased_noise(size, 
     print('Pr(IG)_x:{!r} ~= Pr(IG)_y:{!r} ~= Pr(IG)_z:{!r}'.format(
         biasedx_coset_ps[0], biasedy_coset_ps[0], biasedz_coset_ps[0]
     ))
-    assert(_is_close(biasedx_coset_ps[0], biasedy_coset_ps[0], rtol=rtol, atol=0))
-    assert(_is_close(biasedy_coset_ps[0], biasedz_coset_ps[0], rtol=rtol, atol=0))
+    assert (_is_close(biasedx_coset_ps[0], biasedy_coset_ps[0], rtol=rtol, atol=0))
+    assert (_is_close(biasedy_coset_ps[0], biasedz_coset_ps[0], rtol=rtol, atol=0))
     # expect Pr(XG)_x = Pr(YG)_y = Pr(ZG)_z
     print('Pr(XG)_x:{!r} ~= Pr(YG)_y:{!r} ~= Pr(ZG)_z:{!r}'.format(
         biasedx_coset_ps[1], biasedy_coset_ps[2], biasedz_coset_ps[3]
     ))
-    assert(_is_close(biasedx_coset_ps[1], biasedy_coset_ps[2], rtol=rtol, atol=0))
-    assert(_is_close(biasedy_coset_ps[2], biasedz_coset_ps[3], rtol=rtol, atol=0))
+    assert (_is_close(biasedx_coset_ps[1], biasedy_coset_ps[2], rtol=rtol, atol=0))
+    assert (_is_close(biasedy_coset_ps[2], biasedz_coset_ps[3], rtol=rtol, atol=0))
     # expect Pr(YG)_x = Pr(ZG)_y = Pr(XG)_z
     print('Pr(YG)_x:{!r} ~= Pr(ZG)_y:{!r} ~= Pr(XG)_z:{!r}'.format(
         biasedx_coset_ps[2], biasedy_coset_ps[3], biasedz_coset_ps[1]
     ))
-    assert(_is_close(biasedx_coset_ps[2], biasedy_coset_ps[3], rtol=rtol, atol=0))
-    assert(_is_close(biasedy_coset_ps[3], biasedz_coset_ps[1], rtol=rtol, atol=0))
+    assert (_is_close(biasedx_coset_ps[2], biasedy_coset_ps[3], rtol=rtol, atol=0))
+    assert (_is_close(biasedy_coset_ps[3], biasedz_coset_ps[1], rtol=rtol, atol=0))
     # expect Pr(ZG)_x = Pr(XG)_y = Pr(YG)_z
     print('Pr(ZG)_x:{!r} ~= Pr(XG)_y:{!r} ~= Pr(YG)_z:{!r}'.format(
         biasedx_coset_ps[3], biasedy_coset_ps[1], biasedz_coset_ps[2]
     ))
-    assert(_is_close(biasedx_coset_ps[3], biasedy_coset_ps[1], rtol=rtol, atol=0))
-    assert(_is_close(biasedy_coset_ps[1], biasedz_coset_ps[2], rtol=rtol, atol=0))
+    assert (_is_close(biasedx_coset_ps[3], biasedy_coset_ps[1], rtol=rtol, atol=0))
+    assert (_is_close(biasedy_coset_ps[1], biasedz_coset_ps[2], rtol=rtol, atol=0))
 
 
 def test_color666xyz_mps_decoder_cosets_probability_triplet_optimisation():

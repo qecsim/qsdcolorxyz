@@ -1,6 +1,6 @@
 import pytest
-
 from qecsim import paulitools as pt
+
 from qsdcolorxyz import Color666XYZCode
 
 
@@ -62,6 +62,7 @@ def test_color666xyz_code_logicals():
 def test_color666xyz_code_validate(size):
     code = Color666XYZCode(size)
     code.validate()  # no error raised
+
 
 # </ Code tests >
 # < Lattice tests >

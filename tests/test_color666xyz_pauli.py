@@ -1,6 +1,6 @@
 import pytest
-
 from qecsim import paulitools as pt
+
 from qsdcolorxyz import Color666XYZCode
 
 
