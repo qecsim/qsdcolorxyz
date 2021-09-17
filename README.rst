@@ -1,6 +1,14 @@
 qsdcolorxyz
 ===========
 
+.. image:: https://github.com/qecsim/qsdcolorxyz/workflows/CI/badge.svg?branch=main
+    :target: https://github.com/qecsim/qsdcolorxyz/actions?workflow=CI
+    :alt: CI Status
+
+.. image:: https://codecov.io/gh/qecsim/qsdcolorxyz/branch/main/graph/badge.svg?token=ZF3QNFIN9J
+    :target: https://codecov.io/gh/qecsim/qsdcolorxyz
+    :alt: Coverage
+
 **qsdcolorxyz** is a Python 3 package that extends `qecsim`_ with additional
 components for a variant of the color code.
 
