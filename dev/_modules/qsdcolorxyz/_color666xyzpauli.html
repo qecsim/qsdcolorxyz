@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qsdcolorxyz._color666xyzpauli &mdash; qsdcolorxyz 0.1b1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> qsdcolorxyz
+          </a>
+              <div class="version">
+                0.1b1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes.html">Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../citing.html">Citing</a></li>
+</ul>
+
+        <a href="../../genindex.html">Index</a>
+        <a href="../../py-modindex.html">Module Index</a>
+    
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qsdcolorxyz</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>qsdcolorxyz._color666xyzpauli</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for qsdcolorxyz._color666xyzpauli</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">qecsim.models.color</span> <span class="kn">import</span> <span class="n">Color666Pauli</span>
+
+
+<div class="viewcode-block" id="Color666XYZPauli"><a class="viewcode-back" href="../../api.html#qsdcolorxyz.Color666XYZPauli">[docs]</a><span class="k">class</span> <span class="nc">Color666XYZPauli</span><span class="p">(</span><span class="n">Color666Pauli</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Defines a Pauli operator on a color 6.6.6 XYZ lattice.</span>
+
+<span class="sd">    Notes:</span>
+
+<span class="sd">    * This is a utility class used by color 6.6.6 XYZ implementations of the core models.</span>
+<span class="sd">    * It is typically instantiated using :meth:`qsdcolorxyz.Color666XYZCode.new_pauli`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Color666XYZPauli.site"><a class="viewcode-back" href="../../api.html#qsdcolorxyz.Color666XYZPauli.site">[docs]</a>    <span class="k">def</span> <span class="nf">site</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="o">*</span><span class="n">indices</span><span class="p">,</span> <span class="n">apply_permute</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        As :meth:`Color666Pauli.site` with additional apply_permute parameter.</span>
+
+<span class="sd">        :param operator: Pauli operator. One of &#39;I&#39;, &#39;X&#39;, &#39;Y&#39;, &#39;Z&#39;.</span>
+<span class="sd">        :type operator: str</span>
+<span class="sd">        :param indices: Any number of indices identifying a site in the format (row, column).</span>
+<span class="sd">        :type indices: Any number of 2-tuple of int</span>
+<span class="sd">        :param apply_permute: Permute the operator X-&gt;Y-&gt;Z-&gt;X if the site may be permuted.</span>
+<span class="sd">        :type apply_permute: bool</span>
+<span class="sd">        :return: self (to allow chaining)</span>
+<span class="sd">        :rtype: Color666Pauli</span>
+<span class="sd">        :raises IndexError: If index is not a site index.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">apply_permute</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">is_site_permutable</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
+                <span class="n">op</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;X&#39;</span><span class="p">:</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span> <span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">:</span> <span class="s1">&#39;X&#39;</span><span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">operator</span><span class="p">,</span> <span class="n">operator</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">op</span> <span class="o">=</span> <span class="n">operator</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">site</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Color666XYZPauli.plaquette"><a class="viewcode-back" href="../../api.html#qsdcolorxyz.Color666XYZPauli.plaquette">[docs]</a>    <span class="k">def</span> <span class="nf">plaquette</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply a plaquette operator at the given index.</span>
+
+<span class="sd">        This differs from the standard Color 6.6.6 code as follows:</span>
+
+<span class="sd">        &#39;X&#39; plaquette:</span>
+<span class="sd">        ::</span>
+
+<span class="sd">            X-Y</span>
+<span class="sd">            |  \</span>
+<span class="sd">            Y   X</span>
+<span class="sd">             \  |</span>
+<span class="sd">              X-Y</span>
+
+<span class="sd">        &#39;Y&#39; plaquette:</span>
+<span class="sd">        ::</span>
+
+<span class="sd">            Y-Z</span>
+<span class="sd">            |  \</span>
+<span class="sd">            Z   Y</span>
+<span class="sd">             \  |</span>
+<span class="sd">              Y-Z</span>
+
+<span class="sd">        &#39;Z&#39; plaquette:</span>
+<span class="sd">        ::</span>
+
+<span class="sd">            Z-X</span>
+<span class="sd">            |  \</span>
+<span class="sd">            X   Z</span>
+<span class="sd">             \  |</span>
+<span class="sd">              Z-X</span>
+
+<span class="sd">        Notes:</span>
+
+<span class="sd">        * Index is in the format (row, column).</span>
+<span class="sd">        * Parts of plaquettes that lie outside the lattice have no effect on the lattice.</span>
+
+<span class="sd">        :param operator: Pauli operator. One of &#39;I&#39;, &#39;X&#39;, &#39;Y&#39;, &#39;Z&#39;.</span>
+<span class="sd">        :type operator: str</span>
+<span class="sd">        :param index: Index identifying the plaquette in the format (row, column).</span>
+<span class="sd">        :type index: 2-tuple of int</span>
+<span class="sd">        :return: self (to allow chaining)</span>
+<span class="sd">        :rtype: Color666XYZPauli</span>
+<span class="sd">        :raises IndexError: If index is not a plaquette index.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">index</span>
+        <span class="c1"># check valid index</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">is_plaquette</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is not a plaquette index.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
+        <span class="c1"># flip plaquette sites</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="p">(</span><span class="n">operator</span><span class="p">,</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                  <span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">c</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">apply_permute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Color666XYZPauli.logical_x"><a class="viewcode-back" href="../../api.html#qsdcolorxyz.Color666XYZPauli.logical_x">[docs]</a>    <span class="k">def</span> <span class="nf">logical_x</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply a logical X operator, i.e. column of alternating X, Y along leftmost sites.</span>
+
+<span class="sd">        Notes:</span>
+
+<span class="sd">        * The column of operators is applied to the leftmost column to allow optimisation of the MPS decoder.</span>
+
+<span class="sd">        :return: self (to allow chaining)</span>
+<span class="sd">        :rtype: Color666XYZPauli</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">bound</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="n">row</span><span class="p">,</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">is_site</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">apply_permute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Color666XYZPauli.logical_z"><a class="viewcode-back" href="../../api.html#qsdcolorxyz.Color666XYZPauli.logical_z">[docs]</a>    <span class="k">def</span> <span class="nf">logical_z</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply a logical Z operator, i.e. column of alternating Z, X along leftmost sites.</span>
+
+<span class="sd">        Notes:</span>
+
+<span class="sd">        * The column of operators is applied to the leftmost column to allow optimisation of the MPS decoder.</span>
+
+<span class="sd">        :return: self (to allow chaining)</span>
+<span class="sd">        :rtype: Color666XYZPauli</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">bound</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="n">row</span><span class="p">,</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">is_site</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">apply_permute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, David K. Tuckett.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

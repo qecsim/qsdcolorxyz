@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qsdcolorxyz._color666xyzmpsdecoder &mdash; qsdcolorxyz 0.1b1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> qsdcolorxyz
+          </a>
+              <div class="version">
+                0.1b1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes.html">Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../citing.html">Citing</a></li>
+</ul>
+
+        <a href="../../genindex.html">Index</a>
+        <a href="../../py-modindex.html">Module Index</a>
+    
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qsdcolorxyz</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>qsdcolorxyz._color666xyzmpsdecoder</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for qsdcolorxyz._color666xyzmpsdecoder</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">qecsim</span> <span class="kn">import</span> <span class="n">paulitools</span> <span class="k">as</span> <span class="n">pt</span>
+<span class="kn">from</span> <span class="nn">qecsim</span> <span class="kn">import</span> <span class="n">tensortools</span> <span class="k">as</span> <span class="n">tt</span>
+<span class="kn">from</span> <span class="nn">qecsim.model</span> <span class="kn">import</span> <span class="n">cli_description</span>
+<span class="kn">from</span> <span class="nn">qecsim.models.color</span> <span class="kn">import</span> <span class="n">Color666MPSDecoder</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Color666XYZMPSDecoder"><a class="viewcode-back" href="../../api.html#qsdcolorxyz.Color666XYZMPSDecoder">[docs]</a><span class="nd">@cli_description</span><span class="p">(</span><span class="s1">&#39;MPS ([chi] INT, ...)&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Color666XYZMPSDecoder</span><span class="p">(</span><span class="n">Color666MPSDecoder</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Implements a color 6.6.6 XYZ Matrix Product State (MPS) decoder.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Color666XYZMPSDecoder.sample_recovery"><a class="viewcode-back" href="../../api.html#qsdcolorxyz.Color666XYZMPSDecoder.sample_recovery">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">sample_recovery</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">syndrome</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a sample Pauli consistent with the syndrome, created by applying a path between each plaquette identified</span>
+<span class="sd">        by the syndrome and the nearest boundary of the same type as the plaquette.</span>
+
+<span class="sd">        :param code: Color 666 XYZ code.</span>
+<span class="sd">        :type code: Color666XYZCode</span>
+<span class="sd">        :param syndrome: Syndrome as binary vector.</span>
+<span class="sd">        :type syndrome: numpy.array (1d)</span>
+<span class="sd">        :return: Sample recovery operation as color 666 XYZ Pauli.</span>
+<span class="sd">        :rtype: Color666XYZPauli</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># prepare sample</span>
+        <span class="n">sample_recovery</span> <span class="o">=</span> <span class="n">code</span><span class="o">.</span><span class="n">new_pauli</span><span class="p">()</span>
+        <span class="c1"># iterate syndrome_indices and corrective operator</span>
+        <span class="k">for</span> <span class="n">syndrome_indices</span><span class="p">,</span> <span class="n">op</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">code</span><span class="o">.</span><span class="n">syndrome_to_plaquette_indices</span><span class="p">(</span><span class="n">syndrome</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)):</span>
+            <span class="c1"># add path of op from syndrome_index:(r1, c1) to virtual_index:(r2, c2) inclusive</span>
+            <span class="k">for</span> <span class="n">r1</span><span class="p">,</span> <span class="n">c1</span> <span class="ow">in</span> <span class="n">syndrome_indices</span><span class="p">:</span>
+                <span class="c1"># find nearest off-boundary plaquette</span>
+                <span class="n">r2</span><span class="p">,</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">code</span><span class="o">.</span><span class="n">virtual_plaquette_index</span><span class="p">((</span><span class="n">r1</span><span class="p">,</span> <span class="n">c1</span><span class="p">))</span>
+                <span class="c1"># path along horizontal</span>
+                <span class="n">step</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">c2</span> <span class="o">-</span> <span class="n">c1</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">step</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">cc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span> <span class="o">+</span> <span class="n">step</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">code</span><span class="o">.</span><span class="n">is_site</span><span class="p">((</span><span class="n">r1</span><span class="p">,</span> <span class="n">cc</span><span class="p">)):</span>
+                            <span class="n">sample_recovery</span><span class="o">.</span><span class="n">site</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="p">(</span><span class="n">r1</span><span class="p">,</span> <span class="n">cc</span><span class="p">),</span> <span class="n">apply_permute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="c1"># path along vertical</span>
+                <span class="n">step</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">r2</span> <span class="o">-</span> <span class="n">r1</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">step</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">rr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span> <span class="n">r2</span> <span class="o">+</span> <span class="n">step</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">code</span><span class="o">.</span><span class="n">is_site</span><span class="p">((</span><span class="n">rr</span><span class="p">,</span> <span class="n">c1</span><span class="p">)):</span>
+                            <span class="n">sample_recovery</span><span class="o">.</span><span class="n">site</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="p">(</span><span class="n">rr</span><span class="p">,</span> <span class="n">c1</span><span class="p">),</span> <span class="n">apply_permute</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># return sample</span>
+        <span class="k">return</span> <span class="n">sample_recovery</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;See :meth:`qecsim.model.Decoder.label`&quot;&quot;&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;chi&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chi</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tol&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tol</span><span class="p">),</span> <span class="p">]</span>
+        <span class="k">return</span> <span class="s1">&#39;Color 6.6.6 XYZ MPS (</span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">params</span> <span class="k">if</span> <span class="n">v</span><span class="p">))</span>
+
+    <span class="k">class</span> <span class="nc">TNC</span><span class="p">(</span><span class="n">Color666MPSDecoder</span><span class="o">.</span><span class="n">TNC</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Tensor network creator&quot;&quot;&quot;</span>
+
+        <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">()</span>
+        <span class="k">def</span> <span class="nf">q_node_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prob_dist</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">permute</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot;Return qubit tensor element value.&quot;&quot;&quot;</span>
+            <span class="n">paulis</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">)</span>
+            <span class="n">op_to_pr</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">paulis</span><span class="p">,</span> <span class="n">prob_dist</span><span class="p">))</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">pauli_to_bsf</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="c1"># n, e, s, w are in {0, 1, 2, 3} so create dict from index to op</span>
+            <span class="n">stabilizer_paulis</span> <span class="o">=</span> <span class="n">paulis</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">permute</span> <span class="k">else</span> <span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span>
+            <span class="n">index_to_op</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">pt</span><span class="o">.</span><span class="n">pauli_to_bsf</span><span class="p">(</span><span class="n">stabilizer_paulis</span><span class="p">)))</span>
+            <span class="c1"># apply ops from indices to f</span>
+            <span class="n">op</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span> <span class="o">+</span> <span class="n">index_to_op</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">index_to_op</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">+</span> <span class="n">index_to_op</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">+</span> <span class="n">index_to_op</span><span class="p">[</span><span class="n">w</span><span class="p">])</span> <span class="o">%</span> <span class="mi">2</span>
+            <span class="c1"># return probability of op</span>
+            <span class="k">return</span> <span class="n">op_to_pr</span><span class="p">[</span><span class="n">pt</span><span class="o">.</span><span class="n">bsf_to_pauli</span><span class="p">(</span><span class="n">op</span><span class="p">)]</span>
+
+        <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span>  <span class="c1"># 256=2^8 is enough for fixed prob_dist</span>
+        <span class="k">def</span> <span class="nf">create_q_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prob_dist</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">compass_direction</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Return qubit tensor.</span>
+
+<span class="sd">            :param prob_dist: Tuple of probability distribution in the format (P(I), P(X), P(Y), P(Z)).</span>
+<span class="sd">            :type prob_dist: 4-tuple of float</span>
+<span class="sd">            :param fs: Two qubit Paulis, e.g. (&#39;I&#39;, None) or (&#39;Z&#39;, &#39;I&#39;).</span>
+<span class="sd">            :type fs: 2-tuple of str</span>
+<span class="sd">            :param compass_direction: Location of tensor relative to squared lattice (figure 3), e.g. &#39;n&#39;, &#39;se&#39; or None.</span>
+<span class="sd">            :type compass_direction: str</span>
+<span class="sd">            :return: Qubit tensor</span>
+<span class="sd">            :rtype: numpy.array (4d)</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+
+            <span class="k">def</span> <span class="nf">_node_shapes</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+                <span class="sd">&quot;&quot;&quot;Return shape of upper and lower tensors including dummy indices.&quot;&quot;&quot;</span>
+                <span class="k">return</span> <span class="p">{</span>  <span class="c1"># direction order n,e,s,w</span>
+                    <span class="s1">&#39;n&#39;</span><span class="p">:</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)),</span>
+                    <span class="s1">&#39;ne&#39;</span><span class="p">:</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)),</span>
+                    <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="kc">None</span><span class="p">),</span>
+                    <span class="s1">&#39;se&#39;</span><span class="p">:</span> <span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="kc">None</span><span class="p">),</span>
+                    <span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)),</span>
+                    <span class="s1">&#39;sw&#39;</span><span class="p">:</span> <span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="kc">None</span><span class="p">),</span>
+                    <span class="s1">&#39;w&#39;</span><span class="p">:</span> <span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+                    <span class="s1">&#39;nw&#39;</span><span class="p">:</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+                <span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">direction</span><span class="p">,</span> <span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)))</span>
+
+            <span class="c1"># create tensors with values</span>
+            <span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">shape</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">permute</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">_node_shapes</span><span class="p">(</span><span class="n">compass_direction</span><span class="p">),</span> <span class="n">fs</span><span class="p">,</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">)):</span>
+                <span class="c1"># stabilizers on lower qubits are permutable</span>
+                <span class="k">assert</span> <span class="p">(</span><span class="n">shape</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">f</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">),</span> <span class="s1">&#39;Restricted Paulis do not match shapes.&#39;</span>
+                <span class="k">if</span> <span class="n">shape</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># add dummy tensor</span>
+                    <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>  <span class="c1"># add qubit tensor</span>
+                    <span class="n">node</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">ndindex</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">shape</span><span class="p">):</span>
+                        <span class="n">node</span><span class="p">[(</span><span class="n">n</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">w</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">q_node_value</span><span class="p">(</span><span class="n">prob_dist</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">permute</span><span class="p">)</span>
+                    <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+            <span class="c1"># merge upper and lower tensors</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;nesw,sESW-&gt;neESwW&#39;</span><span class="p">,</span> <span class="n">nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+                <span class="p">(</span>
+                    <span class="n">nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>  <span class="c1"># n</span>
+                    <span class="n">nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>  <span class="c1"># eE</span>
+                    <span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>  <span class="c1"># S</span>
+                    <span class="n">nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># wW</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="c1"># multiply dimension-16 legs with deltas to reduce dimension to 4</span>
+            <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">16</span><span class="p">:</span>
+                <span class="n">node</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;nesw,Ee-&gt;nEsw&#39;</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">tt</span><span class="o">.</span><span class="n">tsr</span><span class="o">.</span><span class="n">delta</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">)))</span>
+            <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="mi">16</span><span class="p">:</span>
+                <span class="n">node</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;nesw,Ww-&gt;nesW&#39;</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">tt</span><span class="o">.</span><span class="n">tsr</span><span class="o">.</span><span class="n">delta</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">)))</span>
+            <span class="k">return</span> <span class="n">node</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, David K. Tuckett.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

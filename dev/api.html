@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API &mdash; qsdcolorxyz 0.1b1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changes" href="changes.html" />
+    <link rel="prev" title="Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> qsdcolorxyz
+          </a>
+              <div class="version">
+                0.1b1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#qsdcolorxyz-color666xyzcode"><code class="docutils literal notranslate"><span class="pre">qsdcolorxyz.Color666XYZCode</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qsdcolorxyz-color666xyzpauli"><code class="docutils literal notranslate"><span class="pre">qsdcolorxyz.Color666XYZPauli</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qsdcolorxyz-color666xyzmpsdecoder"><code class="docutils literal notranslate"><span class="pre">qsdcolorxyz.Color666XYZMPSDecoder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citing.html">Citing</a></li>
+</ul>
+
+        <a href="genindex.html">Index</a>
+        <a href="py-modindex.html">Module Index</a>
+    
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qsdcolorxyz</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>API</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Permalink to this headline"></a></h1>
+<section id="qsdcolorxyz-color666xyzcode">
+<h2><code class="docutils literal notranslate"><span class="pre">qsdcolorxyz.Color666XYZCode</span></code><a class="headerlink" href="#qsdcolorxyz-color666xyzcode" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qsdcolorxyz.</span></span><span class="sig-name descname"><span class="pre">Color666XYZCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qsdcolorxyz/_color666xyzcode.html#Color666XYZCode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">qecsim.models.color._color666code.Color666Code</span></code></p>
+<p>Implements a triangular color 6.6.6 XYZ code.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.label">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">label</span></span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.label" title="Permalink to this definition"></a></dt>
+<dd><p>See <code class="xref py py-meth docutils literal notranslate"><span class="pre">qecsim.model.StabilizerCode.label()</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.is_site_permutable">
+<span class="sig-name descname"><span class="pre">is_site_permutable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qsdcolorxyz/_color666xyzcode.html#Color666XYZCode.is_site_permutable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.is_site_permutable" title="Permalink to this definition"></a></dt>
+<dd><p>Return true if the site may be permuted X-&gt;Y-&gt;Z-&gt;X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>2-tuple of int</em>) – Index identifying a site in the format (row, column).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the site may be permuted.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If index is not a plaquette index.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.new_pauli">
+<span class="sig-name descname"><span class="pre">new_pauli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bsf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qsdcolorxyz/_color666xyzcode.html#Color666XYZCode.new_pauli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.new_pauli" title="Permalink to this definition"></a></dt>
+<dd><p>Convenience constructor of color 6.6.6 XYZ Pauli for this code.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>For performance reasons, the new Pauli is a view of the given bsf. Modifying one will modify the other.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bsf</strong> (<em>numpy.array</em><em> (</em><em>1d</em><em>)</em>) – Binary symplectic representation of Pauli. (Optional. Defaults to identity.)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Color 6.6.6 XYZ Pauli</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qsdcolorxyz.Color666XYZPauli" title="qsdcolorxyz.Color666XYZPauli">Color666XYZPauli</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initialise new triangular color 6.6.6 code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>size</strong> (<em>int</em>) – Size of side of triangular lattice in terms of number of qubits.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – if size smaller than 3.</p></li>
+<li><p><strong>ValueError</strong> – if size is even.</p></li>
+<li><p><strong>TypeError</strong> – if any parameter is of an invalid type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.ascii_art">
+<span class="sig-name descname"><span class="pre">ascii_art</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">syndrome</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pauli</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.ascii_art" title="Permalink to this definition"></a></dt>
+<dd><p>Return ASCII art style lattice showing syndrome bits and Pauli operators as given.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>syndrome</strong> (<em>numpy.array</em><em> (</em><em>1d</em><em>)</em>) – Syndrome (optional) as binary vector.</p></li>
+<li><p><strong>pauli</strong> (<em>Color666Pauli</em>) – Color 6.6.6 Pauli (optional)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ASCII art style lattice.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.bound">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bound</span></span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.bound" title="Permalink to this definition"></a></dt>
+<dd><p>Maximum value that an index coordinate can take.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.is_in_bounds">
+<span class="sig-name descname"><span class="pre">is_in_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.is_in_bounds" title="Permalink to this definition"></a></dt>
+<dd><p>Return True if the index is within lattice bounds inclusive, irrespective of object type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>2-tuple of int</em>) – Index in the format (row, column).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the index is within lattice bounds inclusive.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.is_plaquette">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">is_plaquette</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.is_plaquette" title="Permalink to this definition"></a></dt>
+<dd><p>Return True if the index specifies a plaquette, irrespective of lattice bounds,
+i.e. column mod 3 == 2 - (row mod 3).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>2-tuple of int</em>) – Index in the format (row, column).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the index specifies a plaquette</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.is_site">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">is_site</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.is_site" title="Permalink to this definition"></a></dt>
+<dd><p>Return True if the index specifies a site, irrespective of lattice bounds,
+i.e. column mod 3 != 2 - (row mod 3).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>2-tuple of int</em>) – Index in the format (row, column).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the index specifies a site</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.logical_xs">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">logical_xs</span></span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.logical_xs" title="Permalink to this definition"></a></dt>
+<dd><p>See <code class="xref py py-meth docutils literal notranslate"><span class="pre">qecsim.model.StabilizerCode.logical_xs()</span></code></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.logical_zs">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">logical_zs</span></span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.logical_zs" title="Permalink to this definition"></a></dt>
+<dd><p>See <code class="xref py py-meth docutils literal notranslate"><span class="pre">qecsim.model.StabilizerCode.logical_zs()</span></code></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.logicals">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">logicals</span></span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.logicals" title="Permalink to this definition"></a></dt>
+<dd><p>Logical operators as binary symplectic matrix.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>Each row is a logical operator.</p></li>
+<li><p>All logical X operators are stacked above all logical Z operators, in the order given by <a class="reference internal" href="#qsdcolorxyz.Color666XYZCode.logical_xs" title="qsdcolorxyz.Color666XYZCode.logical_xs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">logical_xs()</span></code></a>
+and <a class="reference internal" href="#qsdcolorxyz.Color666XYZCode.logical_zs" title="qsdcolorxyz.Color666XYZCode.logical_zs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">logical_zs()</span></code></a>.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.array (2d)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.n_k_d">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_k_d</span></span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.n_k_d" title="Permalink to this definition"></a></dt>
+<dd><p>See <code class="xref py py-meth docutils literal notranslate"><span class="pre">qecsim.model.StabilizerCode.n_k_d()</span></code></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.size">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.size" title="Permalink to this definition"></a></dt>
+<dd><p>Size of any side of the triangular lattice in terms of number of qubits.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.stabilizers">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">stabilizers</span></span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.stabilizers" title="Permalink to this definition"></a></dt>
+<dd><p>See <code class="xref py py-meth docutils literal notranslate"><span class="pre">qecsim.model.StabilizerCode.stabilizers()</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.syndrome_to_plaquette_indices">
+<span class="sig-name descname"><span class="pre">syndrome_to_plaquette_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">syndrome</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.syndrome_to_plaquette_indices" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the indices of the plaquettes associated with the non-commuting stabilizers identified by the syndrome.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>syndrome</strong> (<em>numpy.array</em><em> (</em><em>1d</em><em>)</em>) – Binary vector identifying commuting and non-commuting stabilizers by 0 and 1 respectively.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Two sets of plaquette indices (first set for X stabilizers, second for Z stabilizers).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>set of 2-tuple of int, set of 2-tuple of int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.validate" title="Permalink to this definition"></a></dt>
+<dd><p>Perform various sanity checks.</p>
+<p>Sanity checks:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(stabilizers \odot stabilisers^T = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(stabilizers \odot logicals^T = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(logicals \odot logicals^T = \Lambda\)</span></p></li>
+</ul>
+<p>See <code class="xref py py-func docutils literal notranslate"><span class="pre">qecsim.paulitools.bsp()</span></code> for definition of <span class="math notranslate nohighlight">\(\odot\)</span> and <span class="math notranslate nohighlight">\(\Lambda\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>QecsimError</strong> – if the stabilizers or logicals fail the sanity checks.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZCode.virtual_plaquette_index">
+<span class="sig-name descname"><span class="pre">virtual_plaquette_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZCode.virtual_plaquette_index" title="Permalink to this definition"></a></dt>
+<dd><p>For the given index of a plaquette on the lattice, returns the index of the virtual plaquette just outside the
+boundary of the same color as the plaquette.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>Index is in the format (row, column).</p></li>
+<li><p>Given a red plaquette, the nearest virtual plaquette will reside just outside on the red boundary (i.e. the
+boundary consisting of green and blue plaquettes).</p></li>
+<li><p>The rules for other color plaquettes is found by permuting the colors in the above rule.</p></li>
+<li><p>The above rules apply even if the given index is outside the boundary.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>2-tuple of int</em>) – Index identifying a plaquette in the format (row, column).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Index of virtual plaquette.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>2-tuple of int</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If index is not a plaquette index.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="qsdcolorxyz-color666xyzpauli">
+<h2><code class="docutils literal notranslate"><span class="pre">qsdcolorxyz.Color666XYZPauli</span></code><a class="headerlink" href="#qsdcolorxyz-color666xyzpauli" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZPauli">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qsdcolorxyz.</span></span><span class="sig-name descname"><span class="pre">Color666XYZPauli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bsf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qsdcolorxyz/_color666xyzpauli.html#Color666XYZPauli"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qsdcolorxyz.Color666XYZPauli" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">qecsim.models.color._color666pauli.Color666Pauli</span></code></p>
+<p>Defines a Pauli operator on a color 6.6.6 XYZ lattice.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>This is a utility class used by color 6.6.6 XYZ implementations of the core models.</p></li>
+<li><p>It is typically instantiated using <a class="reference internal" href="#qsdcolorxyz.Color666XYZCode.new_pauli" title="qsdcolorxyz.Color666XYZCode.new_pauli"><code class="xref py py-meth docutils literal notranslate"><span class="pre">qsdcolorxyz.Color666XYZCode.new_pauli()</span></code></a></p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZPauli.site">
+<span class="sig-name descname"><span class="pre">site</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operator</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apply_permute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qsdcolorxyz/_color666xyzpauli.html#Color666XYZPauli.site"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qsdcolorxyz.Color666XYZPauli.site" title="Permalink to this definition"></a></dt>
+<dd><p>As <code class="xref py py-meth docutils literal notranslate"><span class="pre">Color666Pauli.site()</span></code> with additional apply_permute parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>operator</strong> (<em>str</em>) – Pauli operator. One of ‘I’, ‘X’, ‘Y’, ‘Z’.</p></li>
+<li><p><strong>indices</strong> (<em>Any number of 2-tuple of int</em>) – Any number of indices identifying a site in the format (row, column).</p></li>
+<li><p><strong>apply_permute</strong> (<em>bool</em>) – Permute the operator X-&gt;Y-&gt;Z-&gt;X if the site may be permuted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self (to allow chaining)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Color666Pauli</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If index is not a site index.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZPauli.plaquette">
+<span class="sig-name descname"><span class="pre">plaquette</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qsdcolorxyz/_color666xyzpauli.html#Color666XYZPauli.plaquette"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qsdcolorxyz.Color666XYZPauli.plaquette" title="Permalink to this definition"></a></dt>
+<dd><p>Apply a plaquette operator at the given index.</p>
+<p>This differs from the standard Color 6.6.6 code as follows:</p>
+<p>‘X’ plaquette:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="o">-</span><span class="n">Y</span>
+<span class="o">|</span>  \
+<span class="n">Y</span>   <span class="n">X</span>
+ \  <span class="o">|</span>
+  <span class="n">X</span><span class="o">-</span><span class="n">Y</span>
+</pre></div>
+</div>
+<p>‘Y’ plaquette:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span><span class="o">-</span><span class="n">Z</span>
+<span class="o">|</span>  \
+<span class="n">Z</span>   <span class="n">Y</span>
+ \  <span class="o">|</span>
+  <span class="n">Y</span><span class="o">-</span><span class="n">Z</span>
+</pre></div>
+</div>
+<p>‘Z’ plaquette:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span><span class="o">-</span><span class="n">X</span>
+<span class="o">|</span>  \
+<span class="n">X</span>   <span class="n">Z</span>
+ \  <span class="o">|</span>
+  <span class="n">Z</span><span class="o">-</span><span class="n">X</span>
+</pre></div>
+</div>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>Index is in the format (row, column).</p></li>
+<li><p>Parts of plaquettes that lie outside the lattice have no effect on the lattice.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>operator</strong> (<em>str</em>) – Pauli operator. One of ‘I’, ‘X’, ‘Y’, ‘Z’.</p></li>
+<li><p><strong>index</strong> (<em>2-tuple of int</em>) – Index identifying the plaquette in the format (row, column).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self (to allow chaining)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qsdcolorxyz.Color666XYZPauli" title="qsdcolorxyz.Color666XYZPauli">Color666XYZPauli</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If index is not a plaquette index.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZPauli.logical_x">
+<span class="sig-name descname"><span class="pre">logical_x</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qsdcolorxyz/_color666xyzpauli.html#Color666XYZPauli.logical_x"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qsdcolorxyz.Color666XYZPauli.logical_x" title="Permalink to this definition"></a></dt>
+<dd><p>Apply a logical X operator, i.e. column of alternating X, Y along leftmost sites.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>The column of operators is applied to the leftmost column to allow optimisation of the MPS decoder.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self (to allow chaining)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#qsdcolorxyz.Color666XYZPauli" title="qsdcolorxyz.Color666XYZPauli">Color666XYZPauli</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZPauli.logical_z">
+<span class="sig-name descname"><span class="pre">logical_z</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qsdcolorxyz/_color666xyzpauli.html#Color666XYZPauli.logical_z"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qsdcolorxyz.Color666XYZPauli.logical_z" title="Permalink to this definition"></a></dt>
+<dd><p>Apply a logical Z operator, i.e. column of alternating Z, X along leftmost sites.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>The column of operators is applied to the leftmost column to allow optimisation of the MPS decoder.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self (to allow chaining)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#qsdcolorxyz.Color666XYZPauli" title="qsdcolorxyz.Color666XYZPauli">Color666XYZPauli</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZPauli.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bsf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZPauli.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initialise new color 6.6.6 Pauli.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>For performance reasons, the new Pauli is a view of the given bsf. Modifying one will modify the other.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<em>Color666Code</em>) – The color 6.6.6 code.</p></li>
+<li><p><strong>bsf</strong> (<em>numpy.array</em><em> (</em><em>1d</em><em>)</em>) – Binary symplectic representation of Pauli. (Optional. Defaults to identity.)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZPauli.code">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">code</span></span><a class="headerlink" href="#qsdcolorxyz.Color666XYZPauli.code" title="Permalink to this definition"></a></dt>
+<dd><p>The color 6.6.6 code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Color666Code</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZPauli.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZPauli.copy" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a copy of this Pauli that references the same code but is backed by a copy of the bsf.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A copy of this Pauli.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Color666Pauli</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZPauli.operator">
+<span class="sig-name descname"><span class="pre">operator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZPauli.operator" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the operator on the site identified by the index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>2-tuple of int</em>) – Index identifying a site in the format (row, column).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pauli operator. One of ‘I’, ‘X’, ‘Y’, ‘Z’.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If index is not an in-bounds site index.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZPauli.to_bsf">
+<span class="sig-name descname"><span class="pre">to_bsf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZPauli.to_bsf" title="Permalink to this definition"></a></dt>
+<dd><p>Binary symplectic representation of Pauli.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>For performance reasons, the returned bsf is a view of this Pauli. Modifying one will modify the other.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Binary symplectic representation of Pauli.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy.array (1d)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="qsdcolorxyz-color666xyzmpsdecoder">
+<h2><code class="docutils literal notranslate"><span class="pre">qsdcolorxyz.Color666XYZMPSDecoder</span></code><a class="headerlink" href="#qsdcolorxyz-color666xyzmpsdecoder" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZMPSDecoder">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qsdcolorxyz.</span></span><span class="sig-name descname"><span class="pre">Color666XYZMPSDecoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qsdcolorxyz/_color666xyzmpsdecoder.html#Color666XYZMPSDecoder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qsdcolorxyz.Color666XYZMPSDecoder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">qecsim.models.color._color666mpsdecoder.Color666MPSDecoder</span></code></p>
+<p>Implements a color 6.6.6 XYZ Matrix Product State (MPS) decoder.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZMPSDecoder.sample_recovery">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">sample_recovery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syndrome</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qsdcolorxyz/_color666xyzmpsdecoder.html#Color666XYZMPSDecoder.sample_recovery"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qsdcolorxyz.Color666XYZMPSDecoder.sample_recovery" title="Permalink to this definition"></a></dt>
+<dd><p>Return a sample Pauli consistent with the syndrome, created by applying a path between each plaquette identified
+by the syndrome and the nearest boundary of the same type as the plaquette.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference internal" href="#qsdcolorxyz.Color666XYZCode" title="qsdcolorxyz.Color666XYZCode"><em>Color666XYZCode</em></a>) – Color 666 XYZ code.</p></li>
+<li><p><strong>syndrome</strong> (<em>numpy.array</em><em> (</em><em>1d</em><em>)</em>) – Syndrome as binary vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Sample recovery operation as color 666 XYZ Pauli.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qsdcolorxyz.Color666XYZPauli" title="qsdcolorxyz.Color666XYZPauli">Color666XYZPauli</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZMPSDecoder.label">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">label</span></span><a class="headerlink" href="#qsdcolorxyz.Color666XYZMPSDecoder.label" title="Permalink to this definition"></a></dt>
+<dd><p>See <code class="xref py py-meth docutils literal notranslate"><span class="pre">qecsim.model.Decoder.label()</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZMPSDecoder.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZMPSDecoder.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initialise new planar MPS decoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chi</strong> (<em>int</em><em> or </em><em>None</em>) – Truncated bond dimension. (default=None, unrestricted=falsy)</p></li>
+<li><p><strong>tol</strong> (<em>float</em><em> or </em><em>None</em>) – Tolerance for treating normalised singular values as zero. (default=None, unrestricted=falsy)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – if chi is not falsy or &gt; 0.</p></li>
+<li><p><strong>ValueError</strong> – if tol is not falsy or &gt; 0.0.</p></li>
+<li><p><strong>TypeError</strong> – if any parameter is of an invalid type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qsdcolorxyz.Color666XYZMPSDecoder.decode">
+<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syndrome</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DepolarizingErrorModel()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_probability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qsdcolorxyz.Color666XYZMPSDecoder.decode" title="Permalink to this definition"></a></dt>
+<dd><p>See <code class="xref py py-meth docutils literal notranslate"><span class="pre">qecsim.model.Decoder.decode()</span></code></p>
+<p>Note: The optional keyword parameters <code class="docutils literal notranslate"><span class="pre">error_model</span></code> and <code class="docutils literal notranslate"><span class="pre">error_probability</span></code> are used to determine the prior
+probability distribution for use in the decoding algorithm. Any provided error model must implement
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">probability_distribution()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<em>Color666Code</em>) – Color 666 code.</p></li>
+<li><p><strong>syndrome</strong> (<em>numpy.array</em><em> (</em><em>1d</em><em>)</em>) – Syndrome as binary vector.</p></li>
+<li><p><strong>error_model</strong> (<em>ErrorModel</em>) – Error model. (default=DepolarizingErrorModel())</p></li>
+<li><p><strong>error_probability</strong> (<em>float</em>) – Overall probability of an error on a single qubit. (default=0.1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Recovery operation as binary symplectic vector.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.array (1d)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="changes.html" class="btn btn-neutral float-right" title="Changes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, David K. Tuckett.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
