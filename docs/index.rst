@@ -24,6 +24,7 @@ Contents
     changes
     license
     citing
+    links
 
 
 Indices

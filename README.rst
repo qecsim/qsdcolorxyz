@@ -1,6 +1,10 @@
 qsdcolorxyz
 ===========
 
+.. image:: https://img.shields.io/badge/docs-dev-blue.svg
+    :target: https://qecsim.github.io/qsdcolorxyz
+    :alt: Documentation
+
 .. image:: https://github.com/qecsim/qsdcolorxyz/workflows/CI/badge.svg?branch=main
     :target: https://github.com/qecsim/qsdcolorxyz/actions?workflow=CI
     :alt: CI Status
@@ -147,6 +151,7 @@ Links
 -----
 
 * Source code: https://github.com/qecsim/qsdcolorxyz
+* Documentation: https://qecsim.github.io/qsdcolorxyz
 * qecsim source code: https://github.com/qecsim/qecsim
 * qecsim documentation: https://qecsim.github.io/
 * Contact: qecsim@gmail.com
